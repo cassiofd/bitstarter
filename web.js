@@ -2,7 +2,8 @@ var express = require('express');
 
 var app = express.createServer(express.logger());
 
-var buffer = new Buffer('index.html');
+var fs = require('fs');
+var buffer = new Buffer(fs.write(index.html));
 
 app.get('/', function(request, response) {
   response.send(buffer.toString());
