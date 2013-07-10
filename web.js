@@ -2,8 +2,10 @@ var express = require('express');
 
 var app = express.createServer(express.logger());
 
+var buffer = new Buffer("Teste testando sendo testado.");
+
 app.get('/', function(request, response) {
-  response.send('Hello World yeeeyeeee malandrooo!!');
+  response.send(buffer);
 });
 
 var port = process.env.PORT || 5000;
